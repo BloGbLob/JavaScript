@@ -1,2 +1,2 @@
 # JavaScript
-Tutaj są zadania z HTML :)
+Tutaj są zadania z JavaScript :)
