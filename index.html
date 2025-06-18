@@ -1,7 +1,11 @@
 <html> 
      <head> 
             <title> SZKIELET ZALICZENIOWY Pavlo Seliak 2G2</title> 
-          <script language="JavaScript"> 
+          <script language="JavaScript">
+               function WinOpen_zadanie2()  
+               { 
+window.open("zadanie2_sel.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
+               } 
              function WinOpen_zadanie3()  
                { 
 window.open("zadanie3_sel.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
@@ -18,6 +22,7 @@ function okno_zamknij()
       </head> 
 <body> 
    <form> 
+        <input type="button_zadanie2" name="zadanie2" value="zadanie2-seliak" onclick="WinOpen_zadanie2(' ')">
         <input type="button_zadanie3" name="zadanie3" value="zadanie3-seliak" onclick="WinOpen_zadanie3(' ')"> 
         <input type="button_zadanie4" name="zadanie4" value="zadanie4-seliak" onclick="WinOpen_zadanie4(' ')"> 
         <input type="button" value="zamknij okno" onclick="okno_zamknij()"/> 
