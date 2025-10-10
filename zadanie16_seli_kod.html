@@ -5,13 +5,23 @@
          <body> 
           <div style="color:green;font-size:50px;"> 
             <script language="JavaScript"> 
-// Pavlo Seliak   10.10.2025 
+// Pavlo Seliak   03.10.2025 
 // Zadanie 15  
-              var D1_sel=prompt("Liczba=","");  
-              var m; 
+              var D1_sel=prompt("A=","");  
+              var D2_sel=prompt("B=","");
+              var c; 
+              var d;
+              var e;
+              var f;
+              var o;
               var a=parseFloat(D1_sel); 
-                m=(a*2); 
-              document.write(""+a+" = 1/"+m+" + 1/"+m+""); 
+              var b=parseFloat(D2_sel); 
+                c=a*a*a; 
+              d=3*a*a*b;
+              e=3*a*b*b;
+              f=b*b*b;
+              o=c+d+e+f;
+              document.write("("+a+" + "+b+")^3 = "+a+"^3+3*(("+a+")*("+b+")^2))+ 3*(("+a+")^2)*("+b+")) + "+a+"^3 = "+o+""); 
                 function okno_zamknij_seliak() 
                  { 
                    window.close() 
