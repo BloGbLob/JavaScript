@@ -4,32 +4,41 @@
 </head>
    <body> 
      <textarea cols="90" rows="24"> 
-           <html> 
-         <body> 
-          <div style="color:green;font-size:50px;"> 
-        <meta charset="utf-8">
-            <script language="JavaScript"> 
-         
-// Pavlo Seliak   03.10.2025 
-// Zadanie 14
-              var D1_sel=prompt("Liczba=","");  
-              var m; 
-              var h; 
-              var l; 
-              var a=parseFloat(D1_sel); 
-                m=(a+2);
-                h=((a+1)*(a+2));
-                l=(a*(a+1))
-              document.write(""+a+" = 1/"+m+" + 1/"+h+" + 1/"+l+""); 
-                function okno_zamknij_seliak() 
-                 { 
-                   window.close() 
-                 } 
-              </script> 
-            </div> 
-          <input type="button" value="zamknij okno" onclick="okno_zamknij_seliak()"/> 
-        </body> 
-       </html>  
+           <!DOCTYPE html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_sel(a, b) {
+return a + b;}
+
+function odejmowanie_sel(a, b) {
+return a - b;}
+  
+function mnozenie_sel(a, b) {
+return a * b;}
+  
+function od_kwadratu_sel(a, b) {
+return a + b;}
+  
+function reszta_z_dzielenia_a_przez_b_sel(a, b) {
+return a % b;}
+
+document.write("suma="+suma_sel(a,b)+"<br>");
+document.write("odejmowanie="+suma_sel(a,b)+"<br>");
+document.write("suma="+mnozenie_sel(a,b)+"<br>");
+document.write("suma="+od_kwadratu_sel(a*a,b*b)+"<br>");
+document.write("suma="+reszta_z_dzielenia_a_przez_b_sel(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
+
       </textarea> 
     </body> 
 </html> 
