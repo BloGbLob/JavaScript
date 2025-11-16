@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8">
+<div style="color:green; font-size:30px;">
+<script language="JavaScript">
+// Pavlo Seliak Zadanie 22
+// Pole i obwód prostokąta
+var D1_sel = prompt("A=", "");
+var D2_sel = prompt("B=", "");
+var a = parseFloat(D1_sel);
+var b = parseFloat(D2_sel);
+function Pole_seliak(a_sel, b_sel) {
+return a_sel * b_sel;
+}
+function obwod_seliak(a_sel, b_sel) {
+return 2 * (a_sel + b_sel);
+}
+var pole = Pole_seliak(a, b);
+var obw = obwod_seliak(a, b);
+document.write("Pole = " + pole + "<br>Obwód = " + obw);
+function okno_zamknij_seliak() {
+window.close();
+}
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_seliak()"/>
+</body>
+</html>
