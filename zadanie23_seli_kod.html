@@ -1,0 +1,44 @@
+<html> 
+   <head>
+<meta charset="utf-8">
+</head>
+   <body> 
+     <textarea cols="90" rows="24"> 
+         <!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8">
+<div style="color:blue; font-size:26px;">
+<script language="JavaScript">
+// Pavlo Seliak Zadanie 23
+// Drabina – długość i kąt nachylenia
+var D_sel = prompt("Podaj wysokość oparcia D (m):", "");
+var X_sel = prompt("Podaj odległość podstawy X (m):", "");
+var D = parseFloat(D_sel);
+var X = parseFloat(X_sel);
+// funkcje
+function dlugosc_seliak(D_sel, X_sel) {
+return Math.sqrt(D_sel*D_sel + X_sel*X_sel);
+}
+function kat_seliak(D_sel, X_sel) {
+// arcustangens
+var rad = Math.atan(D_sel / X_sel);
+var deg = rad * (180 / Math.PI);
+return deg;
+}
+var dl = dlugosc_seliak(D, X);
+var kat = kat_seliak(D, X);
+document.write("Długość drabiny = " + dl.toFixed(2) + " m<br>");
+document.write("Kąt nachylenia = " + kat.toFixed(2) + " stopni");
+function okno_zamknij_seliak() {
+window.close();
+}
+</script>
+</div>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_seliak()"/>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
