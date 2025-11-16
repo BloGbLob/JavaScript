@@ -1,0 +1,53 @@
+<html> 
+   <head>
+<meta charset="utf-8">
+</head>
+   <body> 
+     <textarea cols="90" rows="24"> 
+         <!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8">
+<div style="color:darkred; font-size:22px;">
+<script language="JavaScript">
+// Pavlo Seliak  Zadanie 20
+// Długości boków trójkąta
+
+// funkcje
+function AB_seliak(xa_sel, ya_sel, xb_sel, yb_sel) {
+    return Math.sqrt(Math.pow((xb_sel - xa_sel), 2) + Math.pow((yb_sel - ya_sel), 2));
+}
+function BC_seliak(xb_sel, yb_sel, xc_sel, yc_sel) {
+    return Math.sqrt(Math.pow((xc_sel - xb_sel), 2) + Math.pow((yc_sel - yb_sel), 2));
+}
+function AC_seliak(xa_sel, ya_sel, xc_sel, yc_sel) {
+    return Math.sqrt(Math.pow((xc_sel - xa_sel), 2) + Math.pow((yc_sel - ya_sel), 2));
+}
+
+// wczytanie z prompt (6 okienek)
+var xa_sel = parseFloat(prompt("Podaj xa:", ""));
+var ya_sel = parseFloat(prompt("Podaj ya:", ""));
+var xb_sel = parseFloat(prompt("Podaj xb:", ""));
+var yb_sel = parseFloat(prompt("Podaj yb:", ""));
+var xc_sel = parseFloat(prompt("Podaj xc:", ""));
+var yc_sel = parseFloat(prompt("Podaj yc:", ""));
+
+// obliczenia
+var AB = AB_seliak(xa_sel, ya_sel, xb_sel, yb_sel);
+var BC = BC_seliak(xb_sel, yb_sel, xc_sel, yc_sel);
+var AC = AC_seliak(xa_sel, ya_sel, xc_sel, yc_sel);
+
+document.write("Długość AB = " + AB.toFixed(2) + "<br>");
+document.write("Długość BC = " + BC.toFixed(2) + "<br>");
+document.write("Długość AC = " + AC.toFixed(2) + "<br>");
+
+function okno_zamknij_seliak() { window.close(); }
+</script>
+</div>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_seliak()"/>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
