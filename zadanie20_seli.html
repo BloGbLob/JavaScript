@@ -1,37 +1,44 @@
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styl.css">
-</head>
 <body>
-<script type="text/javascript">
-function pole_sel()
-{
-var xa_sel= parseFloat(document.getElementById('dlugosc1').value);
-var ya_sel= parseFloat(document.getElementById('dlugosc2').value);
-var xb_sel= parseFloat(document.getElementById('dlugosc3').value);
-var yb_sel= parseFloat(document.getElementById('dlugosc4').value);
-var xc_sel= parseFloat(document.getElementById('dlugosc5').value);
-var yc_sel= parseFloat(document.getElementById('dlugosc6').value);
-var xa_sel= a*a;
-document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";
+<meta charset="utf-8">
+<div style="color:darkred; font-size:22px;">
+<script language="JavaScript">
+// Pavlo Seliak  Zadanie 20
+// Długości boków trójkąta
+
+// funkcje
+function AB_seliak(xa_sel, ya_sel, xb_sel, yb_sel) {
+    return Math.sqrt(Math.pow((xb_sel - xa_sel), 2) + Math.pow((yb_sel - ya_sel), 2));
 }
-function obwod_sel()
-{
-var a_sel= parseFloat(document.getElementById('dlugosc').value);
-var b_sel= 4*a;
-document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm";
+function BC_seliak(xb_sel, yb_sel, xc_sel, yc_sel) {
+    return Math.sqrt(Math.pow((xc_sel - xb_sel), 2) + Math.pow((yc_sel - yb_sel), 2));
 }
+function AC_seliak(xa_sel, ya_sel, xc_sel, yc_sel) {
+    return Math.sqrt(Math.pow((xc_sel - xa_sel), 2) + Math.pow((yc_sel - ya_sel), 2));
+}
+
+// wczytanie z prompt (6 okienek)
+var xa_sel = parseFloat(prompt("Podaj xa:", ""));
+var ya_sel = parseFloat(prompt("Podaj ya:", ""));
+var xb_sel = parseFloat(prompt("Podaj xb:", ""));
+var yb_sel = parseFloat(prompt("Podaj yb:", ""));
+var xc_sel = parseFloat(prompt("Podaj xc:", ""));
+var yc_sel = parseFloat(prompt("Podaj yc:", ""));
+
+// obliczenia
+var AB = AB_seliak(xa_sel, ya_sel, xb_sel, yb_sel);
+var BC = BC_seliak(xb_sel, yb_sel, xc_sel, yc_sel);
+var AC = AC_seliak(xa_sel, ya_sel, xc_sel, yc_sel);
+
+document.write("Długość AB = " + AB.toFixed(2) + "<br>");
+document.write("Długość BC = " + BC.toFixed(2) + "<br>");
+document.write("Długość AC = " + AC.toFixed(2) + "<br>");
+
+function okno_zamknij_seliak() { window.close(); }
 </script>
-<h1>Pbliczenia współrzędnych</h1><br><br>
-Podaj A x: <input type="text" id="dlugosc1" value="podaj długość"> <br><br><br>
-Podaj A y: <input type="text" id="dlugosc2" value="podaj długość"><br><br><br>
-Podaj B x: <input type="text" id="dlugosc3" value="podaj długość"><br><br><br>
-Podaj B y: <input type="text" id="dlugosc4" value="podaj długość"><br><br><br>
-Podaj C x: <input type="text" id="dlugosc5" value="podaj długość"><br><br><br>
-Podaj C y: <input type="text" id="dlugosc6" value="podaj długość"><br><br><br>
-<input type="button" name="pole" value="Oblicz pole" Onclick="pole_sel()"><br><br>
-<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_sel()"><br><br>
-<div style="color:red;font-size:50px;"id="nazwa"></div>
+</div>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_seliak()"/>
 </body>
 </html>
