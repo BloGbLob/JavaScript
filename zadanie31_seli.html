@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 31</title>
+<script type="text/javascript">
+/* ====== OBIEKT Z ZADANIA 30 ====== */
+var Mebel = {
+    rodzaj : "Biurko",
+    material : "Drewno",
+    kolor : "Czarny",
+    Mebel_wyswietl_Seliak : function() {
+        document.write("Nazwa obiektu: Mebel<br>");
+        document.write("Pole rodzaj: " + this.rodzaj + "<br>");
+        document.write("Pole material: " + this.material + "<br>");
+        document.write("Pole kolor: " + this.kolor + "<br>");
+        document.write("Nazwa metody: Mebel_wyswietl_Seliak<br>");
+    }
+};
+/* ====== DODANE POZA CIAŁEM OBIEKTU ====== */
+Mebel.cena = 1200;
+Mebel.Mebel_pokaz_Seliak = function() {
+    document.write("Nowe pole (poza obiektem): cena = " + this.cena + "<br>");
+    document.write("Nowa metoda (poza obiektem): Mebel_pokaz_Seliak<br>");
+};
+/* ====== PRZYCISKI ====== */
+function pokazZadanie() {
+    document.getElementById("opis").innerHTML =
+    "Programowanie obiektowe<br>" +
+    "Nr w dzienniku: 22<br>" +
+    "Obiekt: Mebel<br>" +
+    "Pola: rodzaj, material, kolor<br>" +
+    "Metoda: Mebel_wyswietl_Seliak<br>" +
+    "Nowe pole (poza obiektem): cena<br>" +
+    "Nowa metoda (poza obiektem): Mebel_pokaz_Seliak";
+}
+function pokazKod() {
+    document.getElementById("opis").innerText =
+    "var Mebel = { rodzaj, material, kolor, Mebel_wyswietl_Seliak }\n" +
+    "Mebel.cena = 1200;\n" +
+    "Mebel.Mebel_pokaz_Seliak = function() {...}";
+}
+function uruchom() {
+    document.write("<h2>Wynik programu</h2>");
+    Mebel.Mebel_wyswietl_Seliak();
+    Mebel.Mebel_pokaz_Seliak();
+}
+</script>
+</head>
+<body>
+<h1>Zadanie 31 – Programowanie obiektowe</h1>
+<button onclick="pokazZadanie()">Pokaż zadanie</button>
+<button onclick="pokazKod()">Pokaż kod</button>
+<button onclick="uruchom()">Uruchom program</button>
+<hr>
+<div id="opis"></div>
+</body>
+</html>
