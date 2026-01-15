@@ -4,14 +4,12 @@
 <meta charset="UTF-8">
 <title>Zadanie 32</title>
 <script type="text/javascript">
-/* ====== KONSTRUKTOR (KLASA) ====== */
 function Mebel(rodzaj, material, kolor, cena) {
     this.rodzaj = rodzaj;
     this.material = material;
     this.kolor = kolor;
     this.cena = cena;
 }
-/* ====== METODA DODANA PRZEZ PROTOTYPE ====== */
 Mebel.prototype.wyswietl = function() {
     document.write(
         "Rodzaj: " + this.rodzaj + "<br>" +
@@ -20,18 +18,14 @@ Mebel.prototype.wyswietl = function() {
         "Cena: " + this.cena + "<br><br>"
     );
 };
-/* ====== TWORZENIE OBIEKTÓW ====== */
 var mebel1 = new Mebel("Biurko", "Drewno", "Czarny", 1200);
 var mebel2 = new Mebel("Krzesło", "Metal", "Szary", 300);
 var mebel3 = new Mebel("Szafa", "Płyta MDF", "Biała", 2000);
-/* ====== NOWA WŁAŚCIWOŚĆ POZA OBIEKTEM ====== */
 Mebel.prototype.producent = "IKEA";
-/* ====== NOWA METODA POZA OBIEKTEM ====== */
 Mebel.prototype.Mebel_pokaz_Seliak = function() {
     document.write("Producent (nowe pole): " + this.producent + "<br>");
     document.write("Nowa metoda: Mebel_pokaz_Seliak<br><br>");
 };
-/* ====== PRZYCISKI ====== */
 function pokazZadanie() {
     document.getElementById("opis").innerHTML =
     "Zadanie 32 – Programowanie obiektowe<br>" +
