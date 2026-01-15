@@ -1,0 +1,75 @@
+<html> 
+   <head>
+<meta charset="utf-8">
+</head>
+   <body> 
+     <textarea cols="90" rows="24"> 
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 32</title>
+<script type="text/javascript">
+function Mebel(rodzaj, material, kolor, cena) {
+    this.rodzaj = rodzaj;
+    this.material = material;
+    this.kolor = kolor;
+    this.cena = cena;
+}
+Mebel.prototype.wyswietl = function() {
+    document.write(
+        "Rodzaj: " + this.rodzaj + "<br>" +
+        "Materiał: " + this.material + "<br>" +
+        "Kolor: " + this.kolor + "<br>" +
+        "Cena: " + this.cena + "<br><br>"
+    );
+};
+var mebel1 = new Mebel("Biurko", "Drewno", "Czarny", 1200);
+var mebel2 = new Mebel("Krzesło", "Metal", "Szary", 300);
+var mebel3 = new Mebel("Szafa", "Płyta MDF", "Biała", 2000);
+Mebel.prototype.producent = "IKEA";
+Mebel.prototype.Mebel_pokaz_Seliak = function() {
+    document.write("Producent (nowe pole): " + this.producent + "<br>");
+    document.write("Nowa metoda: Mebel_pokaz_Seliak<br><br>");
+};
+function pokazZadanie() {
+    document.getElementById("opis").innerHTML =
+    "Zadanie 32 – Programowanie obiektowe<br>" +
+    "Konstruktor: Mebel<br>" +
+    "Pola: rodzaj, material, kolor, cena<br>" +
+    "Metoda z prototype: wyswietl()<br>" +
+    "Nowe pole: producent<br>" +
+    "Nowa metoda: Mebel_pokaz_Seliak<br>" +
+    "Obiekty: mebel1, mebel2, mebel3";
+}
+function pokazKod() {
+    document.getElementById("opis").innerText =
+    "function Mebel(...) {...}\n" +
+    "Mebel.prototype.wyswietl = function() {...}\n" +
+    "var mebel1 = new Mebel(...);\n" +
+    "Mebel.prototype.producent = 'IKEA';\n" +
+    "Mebel.prototype.Mebel_pokaz_Seliak = function() {...}";
+}
+function uruchom() {
+    document.write("<h2>Dane wszystkich obiektów</h2>");
+    mebel1.wyswietl();
+    mebel1.Mebel_pokaz_Seliak();
+    mebel2.wyswietl();
+    mebel2.Mebel_pokaz_Seliak();
+    mebel3.wyswietl();
+    mebel3.Mebel_pokaz_Seliak();
+}
+</script>
+</head>
+<body>
+<h1>Zadanie 32</h1>
+<button onclick="pokazZadanie()">Pokaż zadanie</button>
+<button onclick="pokazKod()">Pokaż kod</button>
+<button onclick="uruchom()">Uruchom program</button>
+<hr>
+<div id="opis"></div>
+</body>
+</html>
+      </textarea> 
+    </body> 
+</html> 
