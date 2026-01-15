@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Zadanie 31</title>
 <script type="text/javascript">
-/* ====== OBIEKT Z ZADANIA 30 ====== */
 var Mebel = {
     rodzaj : "Biurko",
     material : "Drewno",
@@ -17,13 +16,11 @@ var Mebel = {
         document.write("Nazwa metody: Mebel_wyswietl_Seliak<br>");
     }
 };
-/* ====== DODANE POZA CIAŁEM OBIEKTU ====== */
 Mebel.cena = 1200;
 Mebel.Mebel_pokaz_Seliak = function() {
     document.write("Nowe pole (poza obiektem): cena = " + this.cena + "<br>");
     document.write("Nowa metoda (poza obiektem): Mebel_pokaz_Seliak<br>");
 };
-/* ====== PRZYCISKI ====== */
 function pokazZadanie() {
     document.getElementById("opis").innerHTML =
     "Programowanie obiektowe<br>" +
