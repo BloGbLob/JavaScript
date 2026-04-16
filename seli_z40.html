@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Seliak Z40_JS</title>
+</head>
+<body>
+<script>
+function f_sel(x){
+    if(x < 0){
+        return x*x;
+    }
+    else if(x >= 0 && x < 5){
+        return x + 2;
+    }
+    else{
+        return 2*x;
+    }
+}
+var x = parseFloat(prompt("Podaj x:"));
+var wynik = f_sel(x);
+document.write("f(" + x + ") = " + wynik.toFixed(2));
+</script>
+</body>
+</html>
+<!-- Seliak Z40_JS -->
