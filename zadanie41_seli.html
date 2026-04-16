@@ -1,113 +1,70 @@
-<!DOCTYPE html> 
-<html lang="pl"> 
-<head> 
- <title>Zadanie JavaScript</title> 
- <meta charset="utf-8"> 
- <style> 
-  h1 { text-transform: uppercase; } 
-  
- </style> 
-</head> 
-<body> 
- 
- <h1>Proste działania</h1> 
- <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a"> 
- <br><br> 
- <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b"> 
- <br><br> 
- <input type="button" value="DODAWANIE" onclick="suma()"> 
- <input type="button" value="ODEJMOWANIE" onclick="roznica()"> 
- <input type="button" value="MNOŻENIE" onclick="iloczyn()"> 
- <input type="button" value="DZIELENIE" onclick="iloraz()"> 
- <input type="button" value="Pierwsza podana liczba do potegi liczby drugiej" onclick="potega()"> 
- <div id="wynik" style="margin-top:20px;"></div> 
- <script> 
-  function suma() 
-  { 
-   var a = document.getElementById("a").value; 
-   var b = document.getElementById("b").value; 
-   if (a == "" || b == "") 
-   { 
-   document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
-   } else 
-   { 
-    a = parseFloat(a); 
-    b = parseFloat(b); 
-    var suma = a + b; 
-  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma; 
-   } 
-   //alert(a); 
-   //console.log(a); 
-  } 
-  function roznica() 
-  { 
-   var a = document.getElementById("a").value; 
-   var b = document.getElementById("b").value; 
-   if (a == "" || b == "") 
-   { 
-  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
-   } else 
-   { 
-    a = parseFloat(a); 
-    b = parseFloat(b); 
-    var roznica = a - b; 
-  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica; 
-   } 
-  }
-  function iloczyn() 
-  { 
-   var a = document.getElementById("a").value; 
-   var b = document.getElementById("b").value; 
-   if (a == "" || b == "") 
-   { 
-  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
-   } else 
-   { 
-    a = parseFloat(a); 
-    b = parseFloat(b); 
-    var iloczyn = a * b; 
-  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn; 
-   } 
-  }   
- 
-  function iloraz() 
-  { 
-   var a = document.getElementById("a").value; 
-   var b = document.getElementById("b").value; 
-   if (a == "" || b == "") 
-   { 
-  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
-   } else 
-   { 
-    a = parseFloat(a); 
-    b = parseFloat(b); 
-    if (b == 0) 
-    { 
-  document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero."; 
-    } 
-    else 
-    {         
-     var iloraz = a / b; 
-  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz; 
-    } 
-   } 
-  }
-  
-  function potega() 
-  { 
-   var a = document.getElementById("a").value; 
-   var b = document.getElementById("b").value; 
-   if (a == "" || b == "") 
-   { 
-  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
-   } else 
-   { 
-    a = parseFloat(a); 
-    b = parseFloat(b); 
-    Math.pow(a,b); 
-  document.getElementById("wynik").innerHTML = "Wynik potęgowania wynosi: " + potega; 
-   } 
-  }   
- </script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Seliak Z40_JS</title>
+</head>
+<body>
+<h2>Kalkulator - Pavlo Seliak</h2>
+Podaj pierwszą liczbę:
+<input type="text" id="a"><br><br>
+Podaj drugą liczbę:
+<input type="text" id="b"><br><br>
+<button onclick="suma_sel()">Dodawanie</button>
+<button onclick="roznica_sel()">Odejmowanie</button>
+<button onclick="iloczyn_sel()">Mnożenie</button>
+<button onclick="iloraz_sel()">Dzielenie</button>
+<p id="wynik"></p>
+<script>
+function sprawdz_dane(){
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if(a == "" || b == ""){
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+        return false;
+    }
+    return true;
+}
+function suma_sel(){
+    if(!sprawdz_dane()) return;
+
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+
+    var wynik = a + b;
+    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+}
+function roznica_sel(){
+    if(!sprawdz_dane()) return;
+
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+
+    var wynik = a - b;
+    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+}
+function iloczyn_sel(){
+    if(!sprawdz_dane()) return;
+
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+
+    var wynik = a * b;
+    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+}
+function iloraz_sel(){
+    if(!sprawdz_dane()) return;
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+
+    if(b == 0){
+        document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+        return;
+    }
+    var wynik = a / b;
+    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+}
+</script>
+</body>
+</html>
+<!-- Seliak Z40_JS -->
