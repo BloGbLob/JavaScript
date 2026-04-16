@@ -1,16 +1,20 @@
-<html> 
- <body> 
- <div style="color:red;font-size:50px;"> 
-   <meta charset="utf-8">
-    <script language="JavaScript"> 
-  var x=prompt("podaj liczbę x=",""); 
-               var a_sel=parseFloat(x); 
-    document.write("czytana liczba x="+a_sel+"<br>");     
-               if(a_sel%2==0) 
-                      {document.write ("<p style=\"font-size: 40.px; color: black;\"><br>czytana liczba jest parzysta"+"<br></p>");} 
-               else if(a_sel%2!=0) 
-                      {document.write ("<p style=\"font-size: 40.px; color: black;\"><br>czytana liczba jest nieparzysta"+"<br></p>");} 
-                  </script> 
- </div> 
- </body> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Seliak Z36_JS</title>
+</head>
+<body>
+<script>
+var x = prompt("Podaj liczbę:");
+var a = parseInt(x);
+if(a % 2 == 0){
+    document.write("<font color='red' size='3'>Liczba jest parzysta</font>");
+}
+else{
+    document.write("<font color='silver' size='5'>Liczba jest nieparzysta</font>");
+}
+</script>
+</body>
 </html>
+<!-- Seliak Z36_JS -->
