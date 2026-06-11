@@ -11,18 +11,16 @@
     <div style="color:red;font-size:50px;"> 
         <script language="JavaScript"> 
             do { 
-                var liczba_h_sel = prompt("wysokość=", ""); 
-                var h_sel = parseFloat(liczba_h_sel); 
-            } while (h_sel <= 0); 
+                var liczba_h_sel=prompt("wysokość=", ""); 
+                var h_sel=parseFloat(liczba_h_sel); 
+            } while (h_sel<=0); 
             do { 
-                var liczba_a_sel = prompt("podstawę=", ""); 
-                var a_sel = parseFloat(liczba_a_sel); 
-            } while (!(a_sel > 0)); 
-            var pole_sel = a_sel * h_sel / 2; 
+                var liczba_a_sel=prompt("podstawę=", ""); 
+                var a_sel=parseFloat(liczba_a_sel); 
+            } while (!(a_sel>0)); 
+            var pole_sel=a_sel*h_sel/2; 
             document.write("Pole = " + pole_sel.toFixed(2) + " cm^2" + "<br>"); 
         </script> 
-    </div> 
-    <hr>
-    <p><a href="Seliak_Pavlo-Zadanie46.html">Wróć do Zadania 46</a></p>
+    </div>
 </body> 
 </html>
