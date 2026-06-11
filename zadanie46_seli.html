@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 46 - Pavlo Seliak</title>
+</head>
+<body>
+    <h1>Zadanie 46</h1>
+    <p>Wykonał: Pavlo Seliak, klasa 3G2</p>
+    <hr>
+    <script language="JavaScript">
+        var ile_razy_sel = 12;
+        var wielkosc_sel = "40px";
+        document.write("ilość wykonania pętli = " + ile_razy_sel + "<br>");
+        document.write("wielkość liter = " + wielkosc_sel + "<br><br>");
+        document.write("<div style='font-size: " + wielkosc_sel + ";'>");
+        for (var i_sel = 1; i_sel <= ile_razy_sel; i_sel++) {
+            if (i_sel % 2 !== 0) {
+                document.write(i_sel + ". Seliak<br>");
+            } else {
+                document.write(i_sel + ". Pavlo<br>");
+            }
+        }
+        document.write("</div>");
+    </script>
+    <hr>
+    <p><a href="Seliak_Pavlo-Zadanie44.html">Wróć do Zadania 44</a></p>
+</body>
+</html>
