@@ -1,25 +1,31 @@
 <!DOCTYPE html>   
+<html>
 <head>    
-<title>Sprawdzenie danych Twoje nazwisko </title>    
-<meta charset="utf-8">   
+    <title>Sprawdzenie danych Seliak</title>    
+    <meta charset="utf-8">   
 </head>  
 <body> 
-<div style="color:red;font-size:50px;"> 
-<script language="JavaScript"> 
-do { 
-var liczba1=prompt("wysokość=",""); 
-var h=parseFloat(liczba1); 
-} 
-while ( h_sel<=0); 
-do { 
-    var liczba1=prompt("podstawę=",""); 
-    var a=parseFloat(liczba1); 
-    while(!( a_sel>0));
-} 
-while(!( a_sel>0)); 
-var Pole=a_sel*h_sel/2; 
-document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>"); 
-</script> 
-</div> 
+    <h1>Zadanie 49</h1>
+    <p>Wykonał: Pavlo Seliak 3G2</p>
+    <hr>
+    <div style="color:red;font-size:50px;"> 
+        <script language="JavaScript"> 
+            do { 
+                var l1 = prompt("Podaj bok a=", ""); 
+                var a_sel = parseFloat(l1); 
+                var l2 = prompt("Podaj bok b=", ""); 
+                var b_sel = parseFloat(l2); 
+                var l3 = prompt("Podaj bok c=", ""); 
+                var c_sel = parseFloat(l3); 
+            } 
+            while (!(a_sel > 0 && b_sel > 0 && c_sel > 0 && a_sel + b_sel > c_sel && a_sel + c_sel > b_sel && b_sel + c_sel > a_sel)); 
+            document.write("Podane boki tworzą trójkąt:<br>"); 
+            document.write("a = " + a_sel + "<br>"); 
+            document.write("b = " + b_sel + "<br>"); 
+            document.write("c = " + c_sel + "<br>"); 
+        </script> 
+    </div> 
+    <hr>
+    <p><a href="Seliak_Pavlo-Zadanie47.html">Wróć do Zadania 47</a></p>
 </body> 
-</html> 
+</html>
