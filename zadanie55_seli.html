@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 55 - Pavlo Seliak</title>
+</head>
+<body>
+<h1>Zadanie 55</h1>
+<p>Wykonał: Pavlo Seliak 3G2</p>
+<hr>
+<script language="JavaScript">
+var a_sel=parseInt(prompt("Podaj bok a (wysokość)=",""));
+var b_sel=parseInt(prompt("Podaj bok b (szerokość)=",""));
+for(var i_sel=1;i_sel<=b_sel;i_sel++){
+document.write("*");
+}
+document.write("<br>");
+var wiersz_sel="*";
+for(var i_sel=1;i_sel<=(b_sel-2);i_sel++){
+wiersz_sel=wiersz_sel+"&nbsp;&nbsp;";
+}
+wiersz_sel=wiersz_sel+"*<br>";
+for(var i_sel=1;i_sel<=(a_sel-2);i_sel++){
+document.write(wiersz_sel);
+}
+for(var i_sel=1;i_sel<=b_sel;i_sel++){
+document.write("*");
+}
+</script>
+</body>
+</html>
