@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 60 - Pavlo Seliak</title>
+</head>
+<body>
+<h1>Zadanie 60</h1>
+<p>Wykonał: Pavlo Seliak, klasa 3G2</p>
+<hr>
+<script language="JavaScript">
+var l1_sel=parseInt(prompt("Podaj pierwszą liczbę=",""));
+var l2_sel=parseInt(prompt("Podaj drugą liczbę=",""));
+if(l1_sel==l2_sel){
+confirm("Liczby są równe - brak obliczeń");
+}
+if(l1_sel<l2_sel){
+for(var i_sel=l1_sel;i_sel<=l2_sel;i_sel++){
+if(i_sel%2!=0){
+document.write("<span style=\"color:green;font-size:24px;\">"+i_sel+"<br></span>");
+}
+}
+}
+if(l1_sel>l2_sel){
+for(var i_sel=l1_sel;i_sel>=l2_sel;i_sel--){
+if(i_sel%2!=0){
+document.write("<span style=\"color:blue;font-size:12px;\">"+i_sel+"<br></span>");
+}
+}
+}
+</script>
+</body>
+</html>
