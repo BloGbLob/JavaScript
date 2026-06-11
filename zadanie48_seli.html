@@ -1,25 +1,28 @@
 <!DOCTYPE html>   
+<html>
 <head>    
-<title>Sprawdzenie danych Twoje nazwisko </title>    
-<meta charset="utf-8">   
+    <title>Sprawdzenie danych Seliak</title>    
+    <meta charset="utf-8">   
 </head>  
 <body> 
-<div style="color:red;font-size:50px;"> 
-<script language="JavaScript"> 
-do { 
-var liczba1=prompt("wysokość=",""); 
-var h=parseFloat(liczba1); 
-} 
-while ( h_sel<=0); 
-do { 
-    var liczba1=prompt("podstawę=",""); 
-    var a=parseFloat(liczba1); 
-    while(!( a_sel>0));
-} 
-while(!( a_sel>0)); 
-var Pole=a_sel*h_sel/2; 
-document.write("Pole="+Pole.toFixed(2)+" cm^2"+"<br>"); 
-</script> 
-</div> 
+    <h1>Zadanie 48</h1>
+    <p>Wykonał: Pavlo Seliak 3G2</p>
+    <hr>
+    <div style="color:red;font-size:50px;"> 
+        <script language="JavaScript"> 
+            do { 
+                var liczba_h_sel = prompt("wysokość=", ""); 
+                var h_sel = parseFloat(liczba_h_sel); 
+            } while (h_sel <= 0); 
+            do { 
+                var liczba_a_sel = prompt("podstawę=", ""); 
+                var a_sel = parseFloat(liczba_a_sel); 
+            } while (!(a_sel > 0)); 
+            var pole_sel = a_sel * h_sel / 2; 
+            document.write("Pole = " + pole_sel.toFixed(2) + " cm^2" + "<br>"); 
+        </script> 
+    </div> 
+    <hr>
+    <p><a href="Seliak_Pavlo-Zadanie46.html">Wróć do Zadania 46</a></p>
 </body> 
-</html> 
+</html>
