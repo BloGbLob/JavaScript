@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 61 - Pavlo Seliak</title>
+</head>
+<body>
+<h1>Zadanie 61 - Punkty kratowe w kole</h1>
+<p>Wykonał: Pavlo Seliak 3G2</p>
+<hr>
+<script language="JavaScript">
+var R_sel=parseFloat(prompt("Podaj promień koła R=",""));
+var licznik_sel=0;
+var min_sel=Math.floor(-R_sel-1);
+var max_sel=Math.floor(R_sel+1);
+for(var i_sel=min_sel;i_sel<=max_sel;i_sel++){
+for(var j_sel=min_sel;j_sel<=max_sel;j_sel++){
+if(Math.sqrt(i_sel*i_sel+j_sel*j_sel)<=R_sel){
+licznik_sel++;
+}
+}
+}
+document.write("Dla promienia R = "+R_sel+" liczba punktów kratowych N(R) wynosi: "+licznik_sel+"<br>");
+</script>
+</body>
+</html>
