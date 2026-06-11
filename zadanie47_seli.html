@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 - Pavlo Seliak</title>
+</head>
+<body>
+    <h1>Zadanie 47</h1>
+    <p>Wykonał: Pavlo Seliak, klasa 3G2</p>
+    <hr>
+    <script language="JavaScript">
+        var liczba_sel = prompt("Podaj liczbę:");
+        liczba_sel = parseInt(liczba_sel);
+        var ile_razy_sel = 12;
+        var wielkosc_sel = "40px";
+        document.write("ilość wykonania pętli = " + ile_razy_sel + "<br>");
+        document.write("wielkość liter = " + wielkosc_sel + "<br><br>");
+        if (liczba_sel % 2 === 0) {
+            document.write("<div style='font-size: " + wielkosc_sel + "; color: blue;'>");
+            for (var i_sel = 1; i_sel <= ile_razy_sel; i_sel++) {
+                document.write(i_sel + ". Seliak<br>");
+            }
+            document.write("</div>");
+        } else {
+            document.write("<div style='font-size: " + wielkosc_sel + "; color: green;'>");
+            for (var i_sel = 1; i_sel <= ile_razy_sel; i_sel++) {
+                document.write(i_sel + ". Pavlo<br>");
+            }
+            document.write("</div>");
+        }
+    </script>
+</body>
+</html>
