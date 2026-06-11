@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 59 - Pavlo Seliak</title>
+</head>
+<body>
+<h1>Zadanie 59 - Pierwiastki</h1>
+<p>Wykonał: Pavlo Seliak 3G2</p>
+<hr>
+<script language="JavaScript">
+var no_sel=parseInt(prompt("Podaj swój numer w dzienniku=",""));
+var licznik_sel=0;
+for(var i_sel=no_sel;i_sel<=(no_sel+15);i_sel++){
+var p2_sel=Math.sqrt(i_sel).toFixed(2);
+var p4_sel=Math.sqrt(Math.sqrt(i_sel)).toFixed(2);
+document.write("i="+i_sel+"&nbsp;&nbsp;&nbsp;&nbsp;pierw_2("+i_sel+")="+p2_sel+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pierw_4("+i_sel+")="+p4_sel+"<br>");
+licznik_sel++;
+if(licznik_sel%3==0&&i_sel<(no_sel+15)){
+alert("Wciśnij OK, aby wyświetlić kolejne 3 linie");
+}
+}
+</script>
+</body>
+</html>
